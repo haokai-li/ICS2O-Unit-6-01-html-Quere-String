@@ -8,14 +8,26 @@
 
 window.onload = function() {
   //input
-  const params = new URLSearchParams(document.location.search)
-  const radius = params.get('r')
+  let params = new URLSearchParams(document.location.search)
+  let radius = params.get('r')
 
   // process
-  const volume = 4 / 3 * 3.1415926535897932384626433 * (radius * radius * radius)
-  const dimensions = "<u>\n<li>radius = " + radius + " cm</li>\n</n>"
+  let volume = 4 / 3 * 3.1415926535897932384626433 * (radius * radius * radius)
+  let dimensions = "<u>\n<li>radius = " + radius + " cm</li>\n</n>"
 
   //output
   document.getElementById('dimensions').innerHTML = dimensions
+  document.getElementById('area').innerHTML = 'Volume≈ ' + volume.toFixed(2) + 'cm³'
+}
+function enterClicked() {
+  // This function get L and W and h and calculate and show it back
+
+  //input
+  let radius = parseFloat(document.getElementById("radius").value)
+  // process
+  let volume = 4 / 3 * 3.1415926535897932384626433 * radius * radius * radius
+
+  //output
+  document.getElementById('dimensions').innerHTML = "<u>\n<li>radius = " + radius + " cm</li>\n</n>"
   document.getElementById('area').innerHTML = 'Volume≈ ' + volume.toFixed(2) + 'cm³'
 }

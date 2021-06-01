@@ -19,6 +19,14 @@
     <h1>Quere-String, with a JS</h1>
     <img src="./image/volume-sphere.png" alt="Sphere" width="35%" height="auto"> <h2>Formulas</h2>
     <h3>V = 4 / 3 x π x r³</h3>
+    <p>
+      Please enter integers for dimensions:
+      <form action="javascript:enterClicked()">
+        <label for="radius">Radius: </label>
+        <input type="number" step=".01" id="radius" placeholder="please take number"> cm<br><br>
+        <input type="submit" value="Calculate Volume">
+      </form>
+    </p>
     <div id="submit-into">
       <div id="dimensions"></div>
       <div id="area"></div>
