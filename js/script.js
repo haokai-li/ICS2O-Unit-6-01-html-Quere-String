@@ -19,8 +19,8 @@ window.onload = function() {
   document.getElementById('dimensions').innerHTML = dimensions
   document.getElementById('area').innerHTML = 'Volume≈ ' + volume.toFixed(2) + 'cm³'
 }
+
 function enterClicked() {
-  // This function get L and W and h and calculate and show it back
 
   //input
   let radius = parseFloat(document.getElementById("radius").value)
